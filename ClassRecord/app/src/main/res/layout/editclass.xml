@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtEditClass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Class"
+        android:textAlignment="center"
+        android:textColor="?attr/colorPrimaryDark"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/txtClassName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="73dp"
+        android:text="Class Name:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtClassNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txtClassName"
+        android:layout_marginTop="128dp"
+        android:text="Class #:"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/txtStudents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txtClassName"
+        android:layout_marginTop="182dp"
+        android:text="Students:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etClassName"
+        android:layout_width="242dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtClassName"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="144dp" />
+
+    <EditText
+        android:id="@+id/etClassNum"
+        android:layout_width="274dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/txtClassNum"
+        android:layout_alignEnd="@+id/txtClassName"
+        android:layout_marginEnd="-254dp"
+        android:inputType="number" />
+
+    <ListView
+        android:id="@+id/lvStudents"
+        android:layout_width="365dp"
+        android:layout_height="214dp"
+        android:layout_below="@+id/txtStudents"
+        android:layout_centerHorizontal="true"></ListView>
+
+    <Button
+        android:id="@+id/bnAddStudent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="109dp"
+        android:text="Add Student"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/bnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="39dp"
+        android:layout_marginStart="87dp"
+        android:text="Save"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/bnDelete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/bnSave"
+        android:layout_marginEnd="87dp"
+        android:text="Delete"
+        android:textSize="18sp" />
+
+
+</RelativeLayout>
