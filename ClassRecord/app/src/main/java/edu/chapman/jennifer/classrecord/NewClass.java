@@ -8,9 +8,6 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.util.Log;
-import android.widget.ListView;
-
-import java.util.ArrayList;
 
 public class NewClass extends Activity {
 
@@ -25,13 +22,9 @@ public class NewClass extends Activity {
     public static final String sendName = "className";
     public static final String sendClassNum = "classNumber";
 
-    ArrayList<String> classNames = new ArrayList<String>();
-    ArrayList<String> classNumbers = new ArrayList<String>();
-
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.newclass);
 
         Log.i(TAG, "NewClass");
@@ -47,14 +40,11 @@ public class NewClass extends Activity {
                 String className = name.getText().toString();
                 String classNumber = classNum.getText().toString();
 
-                classNames.add(className);
-                classNumbers.add(classNumber);
+                MySingleton.getInstance().classNames.add(className);
+                MySingleton.getInstance().classNumbers.add(classNumber);
 
-                //listActivity.putStringArrayListExtra(sendName, classNames);
-                //listActivity.putStringArrayListExtra(sendClassNum, classNumbers);
-
-                listActivity.putExtra(sendName, className);
-                listActivity.putExtra(sendClassNum, classNumber);
+                listActivity.putExtra("sendName", className);
+                listActivity.putExtra("sendClassNum", classNumber);
 
                 startActivity(listActivity);
             }
@@ -66,7 +56,5 @@ public class NewClass extends Activity {
                 classNum.setText("");
             }
         });
-
-
     }
 }

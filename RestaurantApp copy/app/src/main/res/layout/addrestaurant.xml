@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txtRestName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginTop="29dp"
+        android:text="Name:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etRestName"
+        android:layout_width="302dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtRestName"
+        android:layout_alignStart="@+id/etRestPhone" />
+
+    <TextView
+        android:id="@+id/txtRestPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+
+        android:layout_alignStart="@+id/txtRestName"
+        android:layout_marginTop="103dp"
+        android:text="Phone:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etRestPhone"
+        android:layout_width="299dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtRestPhone"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="20dp"
+        android:inputType="phone" />
+
+    <TextView
+        android:id="@+id/txtRestWebsite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txtRestName"
+        android:layout_marginTop="178dp"
+        android:text="Website:"
+        android:textSize="18sp" />
+
+    <EditText
+        android:id="@+id/etRestWebsite"
+        android:layout_width="285dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/txtRestWebsite"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="105dp" />
+
+    <TextView
+        android:id="@+id/txtRestRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/txtRestName"
+        android:layout_marginTop="247dp"
+        android:text="Rating:"
+        android:textSize="18sp" />
+
+    <RatingBar
+        android:id="@+id/rbRestRating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="230dp"
+        android:layout_toEndOf="@+id/txtRestWebsite"
+        android:stepSize="0.5" />
+
+    <TextView
+        android:id="@+id/txtRestCategory"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/txtRestName"
+        android:layout_marginBottom="253dp"
+        android:text="Category:"
+        android:textSize="18sp" />
+
+    <Spinner
+        android:id="@+id/spinRestCategory"
+        android:layout_width="255dp"
+        android:layout_height="34dp"
+        android:layout_alignBottom="@+id/txtRestCategory"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="41dp">
+
+    </Spinner>
+
+    <Button
+        android:id="@+id/bnInsert"
+        android:layout_width="233dp"
+        android:layout_height="75dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="129dp"
+        android:text="Insert"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/bnClear"
+        android:layout_width="172dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="49dp"
+        android:text="Clear"
+        android:textSize="24sp" />
+
+</RelativeLayout>

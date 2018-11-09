@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <SwitchPreference
+        android:defaultValue="false"
+        android:key="parents"
+        android:summary="I could not get this function to work"
+        android:title="Preferences" />
+
+    <CheckBoxPreference
+        android:dependency="parents"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:defaultValue="true"
+        android:key="prefviewPhone"
+        android:title="@string/view_phone" />
+    <CheckBoxPreference
+        android:dependency="parents"
+        android:defaultValue="true"
+        android:key="prefViewWebsite"
+        android:title="@string/view_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+    <CheckBoxPreference
+        android:dependency="parents"
+        android:defaultValue="true"
+        android:key="prefViewCategory"
+        android:title="@string/view_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</PreferenceScreen>

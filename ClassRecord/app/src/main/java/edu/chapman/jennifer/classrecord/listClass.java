@@ -22,11 +22,9 @@ public class listClass extends Activity {
     ListView lv;
     Button newClass;
 
-    public static final String sendName = "className";
+    //public static final String sendName = "className";
     public static final String sendClassNum = "classNumber";
-
-    ArrayList<String> classNames = new ArrayList<>();
-    ArrayList<String> classNums = new ArrayList<>();
+    public static final String sendPosition = "position";
 
     @Override
     public void onCreate(Bundle savedInstanceState){
@@ -40,15 +38,10 @@ public class listClass extends Activity {
         newClass = findViewById(R.id.bnAddNewClass);
 
         Intent intent = getIntent();
-        //final ArrayList<String> names = intent.getStringArrayListExtra(sendName);
-        //final ArrayList<String> num = intent.getStringArrayListExtra(sendClassNum);
-        String names = intent.getStringExtra(sendName);
+        String names = intent.getStringExtra("sendName");
         String nums = intent.getStringExtra(sendClassNum);
 
-        classNames.add(names);
-        classNums.add(nums);
-
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, classNames);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, MySingleton.getInstance().classNames);
         lv.setAdapter(adapter);
         adapter.notifyDataSetChanged();
 
@@ -59,8 +52,14 @@ public class listClass extends Activity {
                 String itemValue = (String) lv.getItemAtPosition(position);
 
                 Intent showClassActivity = new Intent(listClass.this, ShowClass.class);
-                showClassActivity.putExtra(sendName, classNames.get(itemPostion));
-                showClassActivity.putExtra(sendClassNum, classNums.get(itemPostion));
+                showClassActivity.putExtra("sendName", MySingleton.getInstance().classNames.get(itemPostion));
+                showClassActivity.putExtra(sendClassNum, MySingleton.getInstance().classNumbers.get(itemPostion));
+                showClassActivity.putExtra("sendPosition", itemPostion);
+
+                //inserting studFirstName in the hashmap -- key = sendName : value = studFirstName ArrayList
+                MySingleton.getInstance().classList.put(sendName, MySingleton.getInstance().studFirstName);
+
+                Log.i(TAG, String.valueOf(itemPostion));
 
                 startActivity(showClassActivity);
             }

@@ -23,7 +23,13 @@
     <item
         android:id="@+id/preferences"
         android:icon="@android:drawable/ic_menu_manage"
-        android:title="preferences"
-        app:showAsAction="always" />
+        android:title="Preferences"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/sortAlphabetically"
+        android:icon="@android:drawable/ic_menu_sort_alphabetically"
+        android:title="Sort List Alphabetically"
+        app:showAsAction="never" />
 
 </menu>

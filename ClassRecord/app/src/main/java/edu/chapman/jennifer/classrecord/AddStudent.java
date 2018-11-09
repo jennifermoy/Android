@@ -3,16 +3,20 @@ package edu.chapman.jennifer.classrecord;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+
 import java.util.ArrayList;
 
 import static edu.chapman.jennifer.classrecord.listClass.sendClassNum;
-import static edu.chapman.jennifer.classrecord.listClass.sendName;
+import static edu.chapman.jennifer.classrecord.listClass.sendPosition;
 
 public class AddStudent extends Activity {
 
@@ -21,8 +25,11 @@ public class AddStudent extends Activity {
     EditText lastName;
     EditText studNum;
 
-    ArrayList<String> firstNameArray = new ArrayList<String>();
-    public static final String sendStudents = "students";
+    String fname;
+    String lname;
+    String studnum;
+
+    static String TAG = "AddStudent";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,17 +43,26 @@ public class AddStudent extends Activity {
         studNum = findViewById(R.id.etStudentNum);
 
         Intent intent = getIntent();
-        final String name = intent.getStringExtra(sendName);
+        final String name = intent.getStringExtra("sendName");
         final String num = intent.getStringExtra(sendClassNum);
+        final int pos = intent.getIntExtra(sendPosition, 0);
 
         addStudent.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent showClassActivity = new Intent(AddStudent.this, ShowClass.class);
-                showClassActivity.putExtra(sendName, name);
+
+                fname = firstName.getText().toString();
+                lname = lastName.getText().toString();
+                studnum = studNum.getText().toString();
+
+                showClassActivity.putExtra("sendName", name);
                 showClassActivity.putExtra(sendClassNum, num);
-                showClassActivity.putStringArrayListExtra("students", (ArrayList<String>) firstNameArray);
-                //showClassActivity.putExtra(sendStudents, students);
+                showClassActivity.putExtra(sendPosition, pos);
+
+                Log.i(TAG, name);
+
+                MySingleton.getInstance().classList.get(name).add(fname);
 
                 startActivity(showClassActivity);
             }

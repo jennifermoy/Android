@@ -189,6 +189,7 @@ public class MainActivity extends AppCompatActivity {
                 val2 = Double.NaN;
                 binding.editText.setText("");
                 binding.textView.setText("");
+                binding.textView2.setText("");
             }
         });
 

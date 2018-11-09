@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array
+        name="categoriesArray">
+
+        <item></item>
+        <item>Mexican</item>
+        <item>American</item>
+        <item>Chinese</item>
+        <item>Italian</item>
+        <item>Thai</item>
+        <item>Japanese</item>
+
+    </string-array>
+
+</resources>

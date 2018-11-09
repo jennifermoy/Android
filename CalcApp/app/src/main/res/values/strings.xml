@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Calc App</string>
+    <string name="bn0">0</string>
+    <string name="bn1">1</string>
+    <string name="calculator">Calculator</string>
+    <string name="_1">1</string>
+    <string name="_2">2</string>
+</resources>

@@ -1,0 +1,74 @@
+Chapman students need a way to organize their classes.
+
+Create an Android Application that creates a class record (containing name of class, class #, list of students), then after insertion shows a list of classes, when a class is clicked show a screen that shows the class properties and list of students in that class.
+
+Give an option (i.e. Button) to edit that class, allowing them to change properties, delete that class, and add students* to that class.
+*If add student is clicked give a screen to add a new student. Student record should contain: student picture [any pic will do], student name, and student id.
+
+
+Bonus: Allow classes/students to be alphabetically sorted, give option to delete students, grab picture for student from phone's camera
+
+Due 9/24 @ 11:59pm
+
+New Class (Screen 1)
+--------------
+|Name:        |
+|Class#:      |
+|Students:   |
+|                  |
+|                  |
+|[Insrt][Clr] |
+|                  |
+--------------
+
+
+
+List Classes (Screen 2)
+--------------
+|Class1         |
+|Class2         |
+|Class3         |
+|                    |
+|                    |
+|                    |
+--------------
+
+
+Show Class (Screen 3)
+--------------
+|Name:         |
+|Last:           |
+|Class#:       |
+|                   |
+|Students:    |
+|                   |
+|[Edit]
+|                   |
+|                   |
+--------------
+
+Edit Class (Screen 4)
+--------------
+|Name:         |
+|Last:           |
+|Class#:       |
+|                   |
+|Students:   |
+|                   |
+|[Add Student]
+|[Save][Del] |
+|                   |
+--------------
+
+Add Student (Screen 5)
+--------------
+|[Picture]      |
+|Name:         |
+|Last:           |
+|Student#:   |
+|                   |
+|                   |
+|                   |
+|[Save]         |
+|                   |
+--------------
